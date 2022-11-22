@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:backgroundTintMode="add"
-        app:cardBackgroundColor="@color/black"
-        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/event"
+        app:cardCornerRadius="@dimen/card_round"
         app:contentPadding="20dp">
 
         <LinearLayout
@@ -31,7 +31,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Title Here"
-                    android:textColor="@android:color/primary_text_dark"
+                    android:textColor="@android:color/primary_text_light_nodisable"
                     android:textStyle="bold" />
 
                 <TextView
@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="5dp"
                     android:text="10PM"
-                    android:textColor="@android:color/secondary_text_dark"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textStyle="bold" />
 
                 <View
@@ -62,7 +62,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0"
                         android:src="@drawable/person_24"
-                        android:tint="@android:color/secondary_text_dark" />
+                        android:tint="@android:color/secondary_text_light" />
 
                     <TextView
                         android:id="@+id/collabDisplay"
@@ -71,7 +71,7 @@
                         android:layout_gravity="center_vertical"
                         android:paddingStart="5dp"
                         android:text="Collaborator Here"
-                        android:textColor="@android:color/secondary_text_dark" />
+                        android:textColor="@android:color/secondary_text_light" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -82,10 +82,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="0"
+                android:alpha="0.5"
                 android:contentDescription="TODO"
                 android:paddingLeft="5dp"
                 android:src="@drawable/chevron_right_24"
-                app:tint="@android:color/secondary_text_dark" />
+                app:tint="@color/white" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
