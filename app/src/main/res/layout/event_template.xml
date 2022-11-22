@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/taskCard"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:backgroundTint="@color/teal_700"
+        android:backgroundTintMode="add"
+        app:cardBackgroundColor="@color/teal_700"
         app:cardCornerRadius="10dp"
         app:contentPadding="20dp">
 
@@ -36,6 +37,7 @@
                     android:id="@+id/taskTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:alpha="0.8"
                     android:text="10PM"
                     android:textStyle="bold" />
 
@@ -47,25 +49,37 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/arrowImg2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0"
+                        tools:srcCompat="@drawable/person_24" />
 
                     <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="match_parent"
+                        android:id="@+id/collabDisplay"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
+                        android:layout_gravity="center_vertical"
+                        android:paddingStart="5dp"
+                        android:text="Collaborator Here" />
                 </LinearLayout>
 
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/arrowImg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="0"
-                tools:srcCompat="@android:drawable/checkbox_on_background" />
+                android:paddingLeft="5dp"
+                tools:srcCompat="@drawable/chevron_right_24" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
