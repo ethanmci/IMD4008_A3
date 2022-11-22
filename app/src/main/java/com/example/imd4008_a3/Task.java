@@ -13,8 +13,9 @@ public class Task {
     public String title;
     public Date date;
     public List<String> collaborators;
+    public String type;
 
-    public Task(String title, Date date, List<String> collaborators) {
+    public Task(String title, Date date,  List<String> collaborators) {
         this.title = title;
         this.date = date;
         this.collaborators = collaborators;
