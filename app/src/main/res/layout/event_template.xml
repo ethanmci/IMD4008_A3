@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:backgroundTintMode="add"
-        app:cardBackgroundColor="@color/teal_700"
+        app:cardBackgroundColor="@color/black"
         app:cardCornerRadius="10dp"
         app:contentPadding="20dp">
 
@@ -31,14 +31,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Title Here"
+                    android:textColor="@android:color/primary_text_dark"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/taskTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:alpha="0.8"
+                    android:paddingBottom="5dp"
                     android:text="10PM"
+                    android:textColor="@android:color/secondary_text_dark"
                     android:textStyle="bold" />
 
                 <View
@@ -53,13 +55,14 @@
                     android:orientation="horizontal"
                     android:paddingTop="10dp">
 
-                    <ImageView
-                        android:id="@+id/arrowImg2"
-                        android:layout_width="0dp"
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/collabIcon"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="0"
-                        tools:srcCompat="@drawable/person_24" />
+                        android:src="@drawable/person_24"
+                        android:tint="@android:color/secondary_text_dark" />
 
                     <TextView
                         android:id="@+id/collabDisplay"
@@ -67,20 +70,22 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingStart="5dp"
-                        android:text="Collaborator Here" />
+                        android:text="Collaborator Here"
+                        android:textColor="@android:color/secondary_text_dark" />
                 </LinearLayout>
 
             </LinearLayout>
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/arrowImg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="0"
+                android:contentDescription="TODO"
                 android:paddingLeft="5dp"
-                tools:srcCompat="@drawable/chevron_right_24"
-                android:contentDescription="TODO" />
+                android:src="@drawable/chevron_right_24"
+                app:tint="@android:color/secondary_text_dark" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

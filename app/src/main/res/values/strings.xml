@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">IMD4008_A3</string>
+    <string name="app_name">Scheduler - IMD4008_A3</string>
+    <string name="search">Search</string>
 </resources>
