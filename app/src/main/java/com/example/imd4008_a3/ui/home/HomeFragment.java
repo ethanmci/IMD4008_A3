@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.HapticFeedbackConstants;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -19,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import com.example.imd4008_a3.MainActivity;
 import com.example.imd4008_a3.R;
 import com.example.imd4008_a3.Task;
 
@@ -42,7 +44,13 @@ public class HomeFragment extends Fragment {
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.home_layout, container, false);
+        Bundle bundle = ((MainActivity) getActivity()).getData();
+        //TODO: PICK UP FROM HERE!
+        //Log.d("BUNDLE", bundle.getParcelableArrayList("taskList").toString());
         taskList = new ArrayList<>();
+
+        //taskList =
+        /*
         todoView = root.findViewById(R.id.todoViewLayout);
         for(int i = 0; i <= 10; i++) {
             Calendar c = Calendar.getInstance();
@@ -50,6 +58,7 @@ public class HomeFragment extends Fragment {
                     "Title: " + i, c.getTime(), new ArrayList<>(), "EVENT"
             ));
         }
+        */
         buildTodoList(todoView, taskList);
         return root;
     }
